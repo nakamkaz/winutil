@@ -1,0 +1,8 @@
+Communication broker for SSH tunneling
+
+SSH server(stephost) requires
+
+GatewayPorts yes in sshd_config
+
+Connectivity from ssh clients that are kicked by 
+your client system and target system.
