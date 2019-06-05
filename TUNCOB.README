@@ -1,8 +1,24 @@
 Communication broker for SSH tunneling
 
-SSH server(stephost) requires
+SSH server(stephost) requires GatewayPorts yes in sshd_config
 
-GatewayPorts yes in sshd_config
-
-Connectivity from ssh clients that are kicked by 
+Both connectivities from ssh clients that are kicked by 
 your client system and target system.
+
+*Usage*
+ 1. 
+  make a file %TUNCOB%\tunport.txt on 'target' system you want to access.
+
+ 2.
+  write a port number there in order to let 'stephost' system listen on the number.
+
+ 3.
+  start BAT file tuncob.bat on target system.
+  ssh client will establish to connect to stephost.
+
+ 4.
+  Your PC client can access a tcp service  in target system to connect stephost / service port(at 2.)
+
+Connection for stephost:stepport is forwarded to target svc port.
+
+  
